@@ -1,0 +1,75 @@
+body{
+    background-color:rgb(247, 233, 194);
+}
+
+.home{
+    border:1px solid rgb(180, 110, 77);
+    background-color:rgb(180, 110, 77);
+    text-align:center;
+}
+
+a:link{
+    color:black;
+}
+
+a:visited{
+    color:black;
+}
+
+.screen{
+    display: flex;
+}
+
+.first{
+    width: 15%;
+    margin-top:30px;
+    padding-bottom:100px;
+}
+
+.third{
+    display:flex;
+    width:85%;
+    margin-top:20px;
+    justify-content:space-around;
+}
+
+.index-info{
+    font-size:30px;
+    line-height:80px;
+    margin-left:20px;
+    text-align:left;
+}
+
+.content{
+    text-align:center;
+    font-weight:bold;
+    margin-left:250px;
+    margin-top:-250px;
+}
+
+.content p{
+    font-size:20px;
+}
+
+.baby{
+    margin-left:50px;
+    margin-top:20px;
+}
+
+.ise{
+    margin-top:20px;
+}
+
+.mbti{
+    margin-top:20px;
+}
+
+.flower{
+    margin-top:20px;
+    height:300px;
+}
+
+li{
+    font-family: 'Lato', sans-serif;
+    font-size:30px;
+}

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오광혁_자기소개</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
 </head>
@@ -18,10 +19,10 @@
         <div class="first">
             <div class="index-info">
                     <h4>INDEX</h4>
-                    <li><a href="./home.html">Home</a></li>
-                    <li><a href="./who.html">Who am I</a></li>
-                    <li><a href="./what.html">What I like</a></li>
-                    <li><a href="./future.html">My future</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="/who">Who am I</a></li>
+                    <li><a href="/what">What I like</a></li>
+                    <li><a href="/future">My future</a></li>
             </div>
         </div>
         <div class="second">
@@ -41,3 +42,4 @@
 
 </body>
 </html>
+
