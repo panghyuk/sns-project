@@ -15,18 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main import views as main
-from main import views as show
-from main import views as who
-from main import views as what
-from main import views as future
+from main import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',main.showmain),
-    path('show/',show.show),
-    path('who/',who.who,name='who'),
-    path('what/',what.what,name='what'),
-    path('future/',future.future,name='future'),
+    path('',views.showmain),
+    path('show/',views.show),
+    path('who/',views.who,name='who'),
+    path('what/',views.what,name='what'),
+    path('future/',views.future,name='future'),
 ]
 
