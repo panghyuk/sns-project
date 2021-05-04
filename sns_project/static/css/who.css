@@ -1,8 +1,7 @@
-.third{
+.second{
     display:flex;
     margin-top:20px;
     justify-content:space-around;
-    margin-left:100px;
 }
 
 .content{
@@ -17,7 +16,6 @@
 }
 
 .baby{
-    margin-left:50px;
     margin-top:20px;
 }
 
@@ -31,9 +29,4 @@
 
 .flower{
     margin-top:20px;
-}
-
-li{
-    font-family: 'Lato', sans-serif;
-    font-size:30px;
 }

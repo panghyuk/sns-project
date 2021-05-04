@@ -14,8 +14,32 @@ body{
     font-weight:bold;
 }
 
-.second{
+.first{
+    display:flex;
     margin-top:20px;
+}
+
+.skill{
+    display:flex;
+    width:20%;
+    margin-top:100px;
+    margin-left:100px;
+    flex-direction:column;
+    text-align:center;
+}
+
+.python{
+    margin-left:75px;
+    margin-top:50px;
+}
+
+.sql{
+    margin-left:75px;
+    margin-top:50px;
+}
+
+.profile{
+    width:60%;
 }
 
 .profile-img{
@@ -27,6 +51,34 @@ body{
 
 .profile-info{
     text-align:center;
+}
+
+.teach{
+    display:flex;
+    flex-direction:column;
+    width:20%;
+    text-align:center;
+    margin-top:100px;
+    margin-right:100px;
+}
+.part{
+    display:flex;
+    flex-direction:row;
+}
+
+.hc{
+    margin-left:50px;
+    margin-top:30px;
+}
+
+.js{
+    margin-left:50px;
+    margin-top:50px;
+}
+
+.django{
+    margin-top:50px;
+    margin-left:10px;
 }
 
 .facebook{

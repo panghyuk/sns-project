@@ -9,7 +9,7 @@ a:visited{
 .fourth{
     display:flex;
     flex-direction:row;
-    margin-top:100px;
+    margin-top:50px;
 }
 
 .future{
@@ -30,7 +30,6 @@ a:visited{
 }
 
 .lion{
-    margin-top:200px;
     text-align:center;
     font-size:20px;
     line-height:50px;
