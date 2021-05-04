@@ -1,0 +1,59 @@
+a:link{
+    color:black;
+}
+
+a:visited{
+    color:black;
+}
+
+.fourth{
+    display:flex;
+    flex-direction:row;
+    margin-top:100px;
+}
+
+.future{
+    margin-top:100px;
+    width: 50%;
+    text-align:center;
+}
+
+.arrow{
+    margin-top:50px;
+    width:20%;
+    text-align:center;
+}
+.future-pic{
+    margin-top:10px;
+    width:30%;
+    text-align:center;
+}
+
+.lion{
+    margin-top:200px;
+    text-align:center;
+    font-size:20px;
+    line-height:50px;
+}
+
+.ise-link{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.ise-link:hover{
+    background-color:sienna;
+    color:white;
+    font-weight:bold;
+}
+
+.ds{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.ds:hover{
+    background-color:sienna;
+    color:white;
+    font-weight:bold;
+}

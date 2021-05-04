@@ -1,54 +1,46 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Future</title>
-    <link rel="stylesheet" href="{% static 'css/future.css'%}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    {% extends 'base.html'%}
+    {% load static %}
+    {% block content %}
     <div class='home'>
-        <h1>My Future</h1>
+        <p>My Future</p>
     </div>
-    <div class="screen">
-        <div class="first">
-            <div class="index-info">
-                <h4>INDEX</h4>
-                <li><a href="/">Home</a></li>
-                <li><a href="/who">Who am I</a></li>
-                <li><a href="/what">What I like</a></li>
-                <li><a href="/future">My future</a></li>
-            </div>
+    <div class="fourth">
+        <div class="future">
+            <a class="ise-link" href="http://ise.dongguk.edu/index.php" target="_blank">산업공학</a>
+            <h1>+</h1>
+            <a class="ds" href="https://itcec.dongguk.edu/index.php" target="_blank">데이터 사이언스<br>소프트웨어</a>
         </div>
-        <div class="fourth">
-            <div class="future">
-                <a class="ise-link" href="http://ise.dongguk.edu/index.php" target="_blank">산업공학</a>
-                <h1>+</h1>
-                <a class="ds" href="https://itcec.dongguk.edu/index.php" target="_blank">데이터 사이언스 소프트웨어</a>
-            </div>
-            <div class="arrow">
-                <i class="fas fa-long-arrow-alt-right fa-10x"></i>
-            </div>
-            <div class="future-pic">
-                <i class="fas fa-question fa-10x"></i>
-                <h1>금융권 IT/디지털 분야</h1>
-                <h3>or</h3>
-                <h1>데이터 분석가 or 개발자</h1>
-            </div>
+        <div class="arrow">
+            <i class="fas fa-long-arrow-alt-right fa-10x"></i>
         </div>
-    </div>  
-    <div class="lion">
+        <div class="future-pic">
+            <i class="fas fa-question fa-10x"></i>
+            <h1>금융권 IT/디지털</h1>
+            <h3>or</h3>
+            <h1>데이터 분석가</h1>
+        </div>
+    </div>
+        
+    <!-- <div class="lion">
         <a href="http://www.dgulion.com//" target="_blank"><img src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/90166205_1554879351334002_8421521536980090880_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=IMYPeZM7znUAX9a25gn&_nc_ht=scontent-ssn1-1.xx&oh=489dcc625e118edc263bb51e424f4ee5&oe=608C9822" width="250px" hegith="250px"/></a><br>
         <i class="far fa-thumbs-up">동국대 멋사</i><i class="far fa-thumbs-up"></i>
-    </div>
+    </div> -->
     
     <script
         src="https://kit.fontawesome.com/6478f529f2.js"
         crossorigin="anonymous">
     </script>
+    {% endblock %}
 </body>
 </html>

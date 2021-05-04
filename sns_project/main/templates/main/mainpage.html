@@ -1,45 +1,35 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오광혁_자기소개</title>
-    <link rel="stylesheet" href="{% static 'css/home.css'%}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+    <body>
+    {% extends 'base.html'%}
+    {% load static %}
+    {% block content %}
     <div class="home">
-        <h1>HOME</h1>
+        <p>HOME</p>
     </div>
-    <div class="screen">
-        <div class="first">
-            <div class="index-info">
-                    <h4>INDEX</h4>
-                    <li><a href="">Home</a></li>
-                    <li><a href="/who">Who am I</a></li>
-                    <li><a href="/what">What I like</a></li>
-                    <li><a href="/future">My future</a></li>
-            </div>
+    <div class="second">
+        <div>
+            <img class="profile-img" src="{% static 'images/profile.jpg'%}"/>
         </div>
-        <div class="second">
-            <div>
-                <img class="profile-img" src="https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/p843x403/166691021_3910198582404967_1470820677150259681_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=730e14&_nc_ohc=HURTysLFeBgAX-eMvCH&_nc_ht=scontent-ssn1-1.xx&tp=6&oh=d3062ae244d94796b24f623dfc285d52&oe=608EFD96"/>
+        <div class="profile-info">
+            <div id="profile-comment">
+                <h2>어흥! Lv1. 아기사자 오광혁입니다!</h2>
             </div>
-            <div class="profile-info">
-                <div id="profile-comment">
-                    <h2>어흥! Lv1. 아기사자 오광혁입니다!</h2>
-                </div>
-                <a class="insta" href="https://www.instagram.com/5_pang/" target="_blank"><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTAxMDlfNTMg/MDAxNTQ3MDE4MzI4NDIy.O4sP_QpdWO9GiVpfkp92MLvnMGBRzm82q3VhEfz8GMQg.kTDiopuqqvHXHZJ784QiGWX-DwGaEj3mvQ04aCqPC0Qg.PNG.designpress2016/Instagram_logo_2016.png?type=w800" width='100px'/></a>
-                <a class="facebook" href="https://www.facebook.com/gwanghyeog.o1/" target="_blank"><img src="https://pds.joins.com/news/component/betanews/201810/26/98e41ab7.png" width='110px'/></a>
-                <a class="blog" href="https://blog.naver.com/okh9712" target="_blank"><img src="https://lh3.googleusercontent.com/proxy/SNaxU33tZl3mTrw5IRFAMAljxScK_F3eEr3XORhUJTmDjzH81dpqg-Ig2fhqiAzEDvuAxS24ITKZQsIYG5MC-EFF3OitdPhdz2smR8_X1mV789AewvDLzPZyCWSrhDrwqy_lB0iI9FJcYvCqexDD5qIWlLwWjogOpm8XYSoR-UWPatm1-qxKceE2nh3R43bUWGR-gBE9e_2smdxv-C5-fz409wl8Qqcvo7FkhwcDFSRMCxiKpitLNyiPJisZlKZrin5CNhf8jF8w2wlzAPuL8rqAwdMjrHTVD9yTf8Spp1fdOBv5nPYkaZuH50qZ4PT17F1K" width='150px'/></a>
-            </div>
+            <a class="insta" href="https://www.instagram.com/5_pang/" target="_blank"><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTAxMDlfNTMg/MDAxNTQ3MDE4MzI4NDIy.O4sP_QpdWO9GiVpfkp92MLvnMGBRzm82q3VhEfz8GMQg.kTDiopuqqvHXHZJ784QiGWX-DwGaEj3mvQ04aCqPC0Qg.PNG.designpress2016/Instagram_logo_2016.png?type=w800" width='100px'/></a>
+            <a class="facebook" href="https://www.facebook.com/gwanghyeog.o1/" target="_blank"><img src="https://pds.joins.com/news/component/betanews/201810/26/98e41ab7.png" width='110px'/></a>
+            <a class="blog" href="https://blog.naver.com/okh9712" target="_blank"><img src="{% static 'images/blog.png' %}" width='150px'/></a>
         </div>
     </div>
-
-</body>
+    {% endblock %}
+    </body>
 </html>
 
