@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{post.title}}</h1>
+작성자: {{post.writer}}<br>
+날짜: {{post.pub_date}}
+<hr>
+<p>{{post.body}}</p><br><br>
+
+<a href ="{% url 'home'%}">&#60;&#60;돌아가기</a>
+
+{% endblock %}

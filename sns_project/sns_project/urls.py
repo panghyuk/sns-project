@@ -24,5 +24,8 @@ urlpatterns = [
     path('who/',views.who,name='who'),
     path('what/',views.what,name='what'),
     path('future/',views.future,name='future'),
+    path('<str:id>',views.detail,name = 'detail'),
+    path('new/',views.new,name='new'),
+    path('create/',views.create,name='create')
 ]
 
