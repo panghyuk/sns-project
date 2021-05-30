@@ -7,6 +7,10 @@ def showmain(request):
     posts = Post.objects.all()
     return render(request,'main/mainpage.html',{'posts':posts})
 
+def posts(request):
+    posts = Post.objects.all()
+    return render(request, 'main/posts.html', {'posts': posts})
+
 def who(request):
     return render(request,'main/who.html')
 
@@ -50,4 +54,4 @@ def update(request,id):
 def delete(request,id):
     delete_post = Post.objects.get(id=id)
     delete_post.delete()
-    return redirect('main:home')
+    return redirect('main:posts')

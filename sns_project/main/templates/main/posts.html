@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>&#60;글 목록&#62;</h1><br>
+    {% for post in posts%}
+    <div>
+    <h3>{{post.title}}</h3>
+    작성자: {{post.writer}}<br>
+    내용: {{post.summary}}
+    <a class='write' href = "{%url 'main:detail' post.id%}">...더보기</a><br><br>
+    
+    </div>
+    {% endfor %}
+   
+{% endblock %}
+

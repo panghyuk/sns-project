@@ -8,6 +8,7 @@ urlpatterns = [
     path('who/',who,name='who'),
     path('what/',what,name='what'),
     path('future/',future,name='future'),
+    path('posts/', posts, name="posts"),
     path('<str:id>',detail,name = 'detail'),
     path('new/',new,name='new'),
     path('create/',create,name='create'),
