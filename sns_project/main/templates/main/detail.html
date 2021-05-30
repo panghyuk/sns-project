@@ -7,8 +7,15 @@
 작성자: {{post.writer}}<br>
 날짜: {{post.pub_date}}
 <hr>
+{% if post.image%}
+    <p><img src="{{post.image.url}}" alt='사진'></p>
+{% endif %}
+
 <p>{{post.body}}</p><br><br>
 
-<a href ="{% url 'home'%}">&#60;&#60;돌아가기</a>
+<a href ="{% url 'main:home'%}">&#60;&#60;돌아가기</a>
+<a href="{% url 'main:edit' post.id %}">수정하기</a>
+<a href="{% url 'main:delete' post.id %}">삭제하기</a>
+
 
 {% endblock %}
