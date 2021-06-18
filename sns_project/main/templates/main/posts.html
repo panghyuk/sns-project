@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+{% if user.is_authenticated %}
 
     <br><h1>&#60;글 목록&#62;</h1><br>
     {% for post in posts%}
@@ -10,9 +11,14 @@
     작성자: {{post.writer}}<br>
     내용: {{post.summary}}
     <a class='write' href = "{%url 'main:detail' post.id%}">...더보기</a><br><br>
-    
     </div>
     {% endfor %}
+ 
+{% else %}
+<h3>로그인 후 이용 가능</h3>
+<a href = "{% url 'account_login'%}">로그인</a>
+<a href = "{% url 'account_signup'%}">회원가입</a>
+{% endif %}
 
 {% endblock %}
 
