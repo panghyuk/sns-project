@@ -2,8 +2,10 @@
 {% load static %}
 
 {% block content %}
-
-<br><h1>&#60;글 작성하기&#62;</h1><br>
+<div class = 'home'>
+    <p>Create New Post</p>
+</div>
+<br>
 <form action="{%url 'main:create' %}" method="post" enctype = 'multipart/form-data'>
     {% csrf_token %}
     <p>제목: <input type='text' name='title'></p>

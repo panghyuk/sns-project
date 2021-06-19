@@ -2,11 +2,16 @@
 {% load static %}
 {% block content %}
 
+<div class='home'>
+    <p>My Page</p>
+</div>
+
 <div class="container">
     <h1>{{user.username}}</h1>
     <div>
         {% for post in posts %}
-            <a href="{%url 'main:detail' post.id%}">{{post.title}}</a><hr>
+            {{post.title}}<br>
+            <a class= write href="{%url 'main:detail' post.id%}">...더보기</a><hr>
         {%endfor%}
     </div>
 </div>

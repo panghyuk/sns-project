@@ -3,10 +3,12 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-
-    <br><h1>&#60;글 목록&#62;</h1><br>
+    <div class = 'home'>
+        <p>Posts</p>
+    </div>
     {% for post in posts%}
     <div>
+    <br>
     <h3>{{post.title}}</h3>
     작성자: {{post.writer}}<br>
     내용: {{post.summary}}

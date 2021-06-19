@@ -8,7 +8,7 @@ def showmain(request):
     return render(request,'main/mainpage.html',{'posts':posts})
 
 def posts(request):
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('-pub_date')
     return render(request, 'main/posts.html', {'posts': posts})
 
 def who(request):
