@@ -10,7 +10,15 @@
     <div>
     <br>
     <h3>{{post.title}}</h3>
-    작성자: {{post.writer}}<br>
+    {% if post.writer %}
+        {% if 'user' in post.writer.username %}
+            작성자: {{post.writer.last_name}} {{post.writer.first_name}}
+        {% else %}
+            작성자: {{post.writer}}
+        {% endif %}
+        {% else %}
+            작성자: 알수 없음
+        {% endif %}<br>
     내용: {{post.summary}}
     <a class='write' href = "{%url 'main:detail' post.id%}">...더보기</a><br><br>
     </div>

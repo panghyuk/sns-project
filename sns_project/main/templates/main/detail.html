@@ -7,9 +7,19 @@
 </div>
 
 <h1>{{post.title}}</h1>
-작성자: {{post.writer}}<br>
+{% if post.writer %}
+{% if 'user' in post.writer.username %}
+<h3>작성자 : {{post.writer.last_name}} {{post.writer.first_name}}</h3>
+{% else %}
+<h3>작성자: {{post.writer}}</h3>
+{% endif %}
+{% else %}
+<h3>작성자: 알 수 없음</h3>
+{% endif %}
+
 날짜: {{post.pub_date}}
 <hr>
+
 {% if post.image%}
     <p><img src="{{post.image.url}}" alt='사진'></p>
 {% endif %}
@@ -19,6 +29,29 @@
 <a href ="{% url 'main:home'%}">&#60;&#60;돌아가기</a>
 <a href="{% url 'main:edit' post.id %}">수정하기</a>
 <a href="{% url 'main:delete' post.id %}">삭제하기</a>
+<br><br><br>
+
+<div>
+    {% for comment in comments %}
+    <div>
+        작성자: {{comment.writer}}
+        <br><br>
+        {{comment.content}}
+        <br><br>
+        <a href="{% url 'main:edit_comment' post.id %}">수정하기</a>
+        <a href="{% url 'main:delete_comment' post.id %}">삭제하기</a>
+    </div>
+    <br><br>
+    {% endfor %}
+</div>
+
+<div>
+    <form action="{% url 'main:create_comment' post.id %}" method= "POST">
+        {% csrf_token %}
+        <textarea name='content' placeholder='댓글 내용 입력'></textarea>
+        <input type='submit' value='확인'>
+    </form>
+</div>
 
 
 {% endblock %}
