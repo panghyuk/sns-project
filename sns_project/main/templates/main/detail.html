@@ -38,8 +38,8 @@
         <br><br>
         {{comment.content}}
         <br><br>
-        <a href="{% url 'main:edit_comment' post.id %}">수정하기</a>
-        <a href="{% url 'main:delete_comment' post.id %}">삭제하기</a>
+        <a href="{% url 'main:edit_comment' comment.id %}">수정하기</a>
+        <a href="{% url 'main:delete_comment' comment.id %}">삭제하기</a>
     </div>
     <br><br>
     {% endfor %}
