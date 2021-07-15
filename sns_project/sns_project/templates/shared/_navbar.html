@@ -35,7 +35,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% if user.is_authenticated %}
-            <li><a class="dropdown-item" href="{% url 'users:mypage' %}">Mypage</a></li>
+            <li><a class="dropdown-item" href="{% url 'users:mypage' request.user.id %}">Mypage</a></li>
             <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
             {% else %}
             <li><a class="dropdown-item" href="{%url 'account_login'%}">Login</a></li>

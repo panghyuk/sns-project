@@ -11,14 +11,15 @@
     <br>
     <h3>{{post.title}}</h3>
     {% if post.writer %}
-        {% if 'user' in post.writer.username %}
-            작성자: {{post.writer.last_name}} {{post.writer.first_name}}
+        {% if 'user' in post.writer.username and post.writer.username != 'user' %}
+            작성자: <a class='write' href = "{% url 'users:mypage' post.writer.id %}">{{post.writer.last_name}} {{post.writer.first_name}}</a>
         {% else %}
-            작성자: {{post.writer}}
+            작성자: <a class='write' href = "{% url 'users:mypage' post.writer.id %}">{{post.writer}}</a>
         {% endif %}
         {% else %}
             작성자: 알수 없음
         {% endif %}<br>
+        
     내용: {{post.summary}}
     <a class='write' href = "{%url 'main:detail' post.id%}">...더보기</a><br><br>
     </div>
