@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+<div class = 'home'>
+    <p>Sign Up</p>
+</div>
+
+<div class = 'holy'>
+    <form method="POST" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        <br>
+        <h2>정보 입력</h2><br>
+        <p><label for="id_username"></label> <input type="text" name="username" placeholder="  아이디" autocomplete="username" minlength="1" maxlength="150" required="" id="id_username" style="border-radius: 10px; height:30px; width:200px;"></p>
+        <p><label for="id_email"></label> <input type="email" name="email" placeholder="  이메일 주소(선택)" autocomplete="email" id="id_email" style="border-radius: 10px; height:30px; width:200px;"></p>
+        <p><label for="id_password1"></label> <input type="password" name="password1" placeholder="  비밀번호" autocomplete="new-password" required="" id="id_password1" style="border-radius: 10px; height:30px; width:200px;"></p>
+        <p><label for="id_password2"></label> <input type="password" name="password2" placeholder="  비밀번호(확인)" required="" id="id_password2" style="border-radius: 10px; height:30px; width:200px;"></p>
+        <p><input type="submit" value="회원가입" style="height: 20px; background-color: #f8585b; border-radius: 10px; color: white; height: 30px; width: 80px; border: white;"></p>
+    </form>
+</div>
+
+{% endblock %}
