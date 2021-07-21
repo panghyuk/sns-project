@@ -2,10 +2,12 @@
 {% load static %}
 
 {% block content %}
+<div class = 'home'>
+    <p>Posts</p>
+</div>
+
 {% if user.is_authenticated %}
-    <div class = 'home'>
-        <p>Posts</p>
-    </div>
+
     {% for post in posts%}
     <div>
     <br>

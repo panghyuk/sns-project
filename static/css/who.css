@@ -30,3 +30,28 @@
 .flower{
     margin-top:20px;
 }
+
+.holy{
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    margin: auto;
+    width: 300px;
+    height: 350px;
+    background-color: white;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.holy ul{
+    list-style:none;
+    text-align:center;
+    margin-right:30px;
+}
+
+.button{
+    font-size:30px;
+    padding:10px 10px;
+    text-align: center;
+    margin-top: 50px;
+}

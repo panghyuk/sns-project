@@ -5,6 +5,7 @@
 <div class = 'home'>
     <p>Create New Post</p>
 </div>
+{% if user.is_authenticated %}
 <br>
 <form action="{%url 'main:create' %}" method="post" enctype = 'multipart/form-data'>
     {% csrf_token %}
@@ -14,6 +15,11 @@
     <button type='submit'>제출</button>
 </form>
 
+{% else %}
+<h3>로그인 후 이용 가능</h3>
+<a href = "{% url 'account_login'%}">로그인</a>
+<a href = "{% url 'account_signup'%}">회원가입</a>
 
+{% endif %}
 
 {% endblock %}
