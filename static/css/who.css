@@ -1,0 +1,32 @@
+.second{
+    display:flex;
+    margin-top:20px;
+    justify-content:space-around;
+}
+
+.content{
+    text-align:center;
+    font-weight:bold;
+    margin-top:50px;
+    font-size:20px;
+}
+
+.content i{
+    line-height:45px;
+}
+
+.baby{
+    margin-top:20px;
+}
+
+.ise{
+    margin-top:20px;
+}
+
+.mbti{
+    margin-top:20px;
+}
+
+.flower{
+    margin-top:20px;
+}
