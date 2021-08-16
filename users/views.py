@@ -1,16 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from main.models import Post
+from main.models import *
 from .models import User
 
 # Create your views here.
-
-def mypage(request,id):
-    user = get_object_or_404(User, pk = id)
-    context = {
-        'user':user,
-        'posts':Post.objects.filter(writer = user)
-    }
-    return render(request,'users/mypage.html',context)
 
 def follow(request,id):
     user = request.user
@@ -26,7 +18,7 @@ def mypage(request, id):
     user=get_object_or_404(User,pk=id)
     context={
         'user':user,
-        'posts':Post.objects.filter(writer=user),
+        'posts':Post.objects.filter(writer=user).order_by('-pub_date'),
         'followings':user.profile.followings.all(),
         'followers':user.profile.followers.all(),
     }

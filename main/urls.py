@@ -19,4 +19,6 @@ urlpatterns = [
     path('<str:comment_id>/edit_comment',edit_comment,name='edit_comment'),
     path('<str:comment_id>/update_comment',update_comment,name='update_comment'),
     path('<str:comment_id>/delete_comment',delete_comment,name='delete_comment'),
+    path('like_toggle/<int:post_id>/',like_toggle,name='like_toggle'),
+    path('dislike_toggle/<int:post_id>/',dislike_toggle,name='dislike_toggle'),
 ]
